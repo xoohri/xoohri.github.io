@@ -1,4 +1,4 @@
-# Nerfies
+# X-OOHRI
 
 This is the repository that contains source code for the [X-OOHRI website](https://xoohri.github.io).
 
