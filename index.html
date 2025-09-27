@@ -45,10 +45,9 @@
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <div class="columns is-centered">
+      <div class="columns is-centered has-text-centered">
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">Explainable OOHRI: Communicating Robot Capabilities and Limitations as AR Affordances</h1>
-
         </div>
       </div>
     </div>
@@ -60,12 +59,18 @@
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div >
-          <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-                  Working on it ...
+      <div class="column is-full-width">
+        <h2 class="title is-3">Demo video</h2>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/1min_demo.mp4"
+                    type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -82,11 +87,13 @@
         <h2 class="title is-3">Technical Demonstrations</h2>
 
         <!-- Bookshelf. -->
-        <h3 class="title is-4">1</h3>
+        <h3 class="title is-4">1. Single-object pick-and-place: book repositioning</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">XOOHRI</span>, the user .
-          </p>
+            The user wants to place the book on a different shelf. 
+            With <span class="dnerf">X-OOHRI</span>, she moves the virtual twin to specify its placement 
+            while understanding the limitations.
+          </p>  
         </div>
         <div class="content has-text-centered">
           <video id="replay-video"
@@ -95,17 +102,19 @@
                  preload
                  playsinline
                  width="75%">
-            <source src="./static/videos/bookshelves_full.mp4"
+            <source src="./static/videos/bookshelves.mp4"
                     type="video/mp4">
           </video>
         </div>
         <!--/ Bookshelf. -->
 
         <!-- Foam. -->
-        <h3 class="title is-4">2</h3>
+        <h3 class="title is-4">2. Multi-object manipulation: room organization</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">XOOHRI</span>, the user .
+            The user tries to store foam blocks in an occluded basket. 
+            With <span class="dnerf">X-OOHRI</span>, she understands the limitation and selects the Auto resolution, 
+            which pulls the baskets out, stores the blocks, and pushes them back in.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -122,10 +131,13 @@
         <!--/ Foam. -->
 
         <!-- Blinds. -->
-        <h3 class="title is-4">3</h3>
+        <h3 class="title is-4">3. Abstract action: blind adjustment</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">XOOHRI</span>, the user .
+            The user finds the room too dark and wants to adjust the blinds. 
+            With <span class="dnerf">X-OOHRI</span>, she selects the Brighten action, 
+            sees the tilt wand is out of reach, and instead chooses Draw, 
+            opening the blinds through direct manipulation by raising the controller to specify the height.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -164,15 +176,6 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
