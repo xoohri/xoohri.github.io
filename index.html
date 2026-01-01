@@ -47,47 +47,130 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Explainable OOHRI: Communicating Robot Capabilities and Limitations as AR Affordances</h1>
+          <h1 class="title publication-title">Explainable OOHRI: Communicating Robot Capabilities and Limitations as AR Affordances</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://lauren505.github.io/">Lauren W. Wang</a>,</span>
+            <span class="author-block">
+              <a href="https://mkari.de/">Mohamed Kari</a>,</span>
+            <span class="author-block">
+              <a href="https://parastooabtahi.com/">Parastoo Abtahi</a></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Princeton University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Lauren505/X-OOHRI"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- Demo video. -->
+<section class="hero teaser">
   <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/1min_demo.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Demo video
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- Demo video. -->
 
-    <!-- Paper video. -->
+<!-- Abstract. -->
+<section class="section hero is-light">  
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Demo video</h2>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/1min_demo.mp4"
-                    type="video/mp4">
-          </video>
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Human interaction is essential for issuing personalized instructions and assisting robots when failure is likely. However, robots remain largely black boxes, offering users little insight into their evolving capabilities and limitations. To address this gap, we present explainable object-oriented HRI (X-OOHRI), an augmented reality (AR) interface that conveys robot action possibilities and constraints through visual signifiers, radial menus, color coding, and explanation tags. Our system encodes object properties and robot limits into object-oriented structures using a vision-language model, allowing explanation generation on the fly and direct manipulation of virtual twins spatially aligned within a simulated environment. We evaluate X-OOHRI through a formative study and find that users effectively issue object-oriented commands, develop accurate mental models of robot limitations, and engage in mixed-initiative resolution. Finally, we integrate the end-to-end pipeline with a physical robot and showcase diverse use cases ranging from low-level pick-and-place to high-level instructions.
+          </p>
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
   </div>
 </section>
+<!--/ Abstract. -->
 
+<!-- System. -->
+<section class="section">  
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">System Implementation</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/XOOHRI_system.png"
+                 alt="System implementation pipeline image."/>
+          <p>
+          <br>
+            The AR pipeline begins with object and action selection via raycasting and the radial menu. The action module validates feasibility using user input, object-oriented data, environment information, and optional spatial parameters. If limitations arise, the system updates color coding, explanation tags, and optional resolution strategies for users to preview and confirm, before publishing ROS2 messages with generated poses for robot execution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ System. -->
 
 <section class="section">
   <div class="container is-max-desktop">
+
     <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Technical Demonstrations</h2>
 
         <!-- Bookshelf. -->
-        <h3 class="title is-4">1. Single-object pick-and-place: book repositioning</h3>
+        <h3 class="title is-4 pt-4">1. Single-object pick-and-place: book repositioning</h3>
         <div class="content has-text-justified">
           <p>
             The user wants to place the book on a different shelf. 
@@ -101,7 +184,7 @@
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="100%">
             <source src="./static/videos/bookshelves.mp4"
                     type="video/mp4">
           </video>
@@ -109,7 +192,7 @@
         <!--/ Bookshelf. -->
 
         <!-- Foam. -->
-        <h3 class="title is-4">2. Multi-object manipulation: room organization</h3>
+        <h3 class="title is-4 pt-4">2. Multi-object manipulation: room organization</h3>
         <div class="content has-text-justified">
           <p>
             The user tries to store foam blocks in an occluded basket. 
@@ -123,7 +206,7 @@
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="100%">
             <source src="./static/videos/foam.mp4"
                     type="video/mp4">
           </video>
@@ -131,7 +214,7 @@
         <!--/ Foam. -->
 
         <!-- Blinds. -->
-        <h3 class="title is-4">3. Abstract action: blinds adjustment</h3>
+        <h3 class="title is-4 pt-4">3. Abstract action: blinds adjustment</h3>
         <div class="content has-text-justified">
           <p>
             The user finds the room too dark and wants to adjust the blinds. 
@@ -146,7 +229,7 @@
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="100%">
             <source src="./static/videos/blinds.mp4"
                     type="video/mp4">
           </video>
@@ -161,17 +244,12 @@
 </section>
 
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@proceeding</code></pre>
   </div>
-</section> -->
+</section>
 
 
 <footer class="footer">
